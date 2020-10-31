@@ -1,88 +1,62 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-class Horizontal extends StatelessWidget {
+
+class Sections extends StatefulWidget  {
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 70,
+  _SectionsState createState() => _SectionsState();
+}
 
-      child: ListView(
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
-        children: <Widget>[
+class _SectionsState extends State<Sections>
+    with SingleTickerProviderStateMixin {
+  List <Widget>list=[
+    Container(
+       width: 50,
 
-          Category(
-            name: 'Coats',
-          ),
-
-          Category(
-            name: 'Dresses',
-          ),
-
-          Category(
-            name: 'Birds',
-          ),
-
-          Category(
-            name: 'jersey',
-          ),
-          Category(
-            name: 'pants',
-          ),
-
-
-        ],
-      ),
-    );
+        child:
+        Tab(text: "Coat",)),
+    Tab(text: "Dresses",),
+    Tab(text: "Jersey",),
+    Tab(text: "Pants",),
+    Tab(text: "Shirts",),
+  ];
+  TabController controller;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = TabController(length:list.length, vsync: this);
   }
-}
-class Category extends StatefulWidget {
-
-  Category({this.name,});
-  final String name;
 
   @override
-  _CategoryState createState() => _CategoryState();
-}
-
-class _CategoryState extends State<Category> {
-  bool value=false;
+  void dispose() {
+    // TODO: implement dispose
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.all(13.0),
-      child: InkWell(
-        splashColor: Colors.white,
-        onTap: (){
-          setState(() {
-            value=true;
-          });
+    return TabBar(
+        isScrollable: true,
+        labelColor:  Color(0xff333333),
+        labelStyle: TextStyle(
+          letterSpacing: 0.5,
+            color:
+            Color(0xff828282),
+            fontWeight: FontWeight.w700),
+        unselectedLabelColor: Color(0xff828282),
+        indicator: BoxDecoration(
 
-          print(value);
-        },
-        child: Container(
-          width: 70,
-          height: 70,
-          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(30)),
 
-              color: value?Color(0xffF8D9E0):null,
-              borderRadius: BorderRadius.all(Radius.circular(20))
-          ),
-          child: Center(child:
-          Padding(
-            padding: const EdgeInsets.only(left:8.0,right: 8.0),
-            child: Text(
-              widget.name,
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),),
+            color:
+            Color(0xffFBD9E0)
         ),
-      ),
-    );
+        controller: controller,
+        tabs: list
+
+
+
+        );
   }
 }
