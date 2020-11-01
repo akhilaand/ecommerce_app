@@ -19,7 +19,7 @@ class _Home_ScreenState extends State<Home_Screen> {
 
   @override
   void initState() {
-    SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
+
     // TODO: implement initState
     super.initState();
   }
@@ -30,25 +30,55 @@ class _Home_ScreenState extends State<Home_Screen> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 12,right: 12,top: 8,bottom: 8),
-            child: ScrollConfiguration(
-            behavior: new ScrollBehavior()
-            ..buildViewportChrome(context, null, AxisDirection.down),
-            child: ListView(
-              children:<Widget>[
-                Column(
+          child: ScrollConfiguration(
+          behavior: new ScrollBehavior()
+          ..buildViewportChrome(context, null, AxisDirection.down),
+          child: ListView(
+            children:<Widget>[
+              Padding(
+                padding: const EdgeInsets.only(top:8.0,left: 5),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      CircleAvatar(),
-                      IconButton(icon: Icon(Icons.shopping_cart,
-                      color: black,
+                      Padding(
+                        padding: const EdgeInsets.only(left:3.0),
+                        child: CircleAvatar(
+                          backgroundImage: AssetImage('images/circle.jpg'),
+                        ),
                       ),
-                          onPressed: null)
+                      Stack(
+                          children:<Widget>[ IconButton(
+                              icon: Icon(Icons.shopping_cart,
+                                color: Colors.black,
+                              ),
+                              onPressed: null),
+                            Positioned(
+                              top: 5,
+                              right: 8,
+                              child: Container(
+                                height: 20,
+                                width:14,
+                                child:  Center(child: Text('2',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w700
+
+                                  ),
+                                )),
+                                decoration: BoxDecoration(
+                                    color: Color(0xffF8D9E0),
+                                    shape: BoxShape.circle
+                                ),
+
+                              ),
+                            ),
+
+
+                          ]),
                     ],
                   ),
                   SizedBox(
@@ -93,8 +123,8 @@ class _Home_ScreenState extends State<Home_Screen> {
                   )
                   ])
                 ],
-              ),])
             ),
+              ),])
           ),
         ),
         ));

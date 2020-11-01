@@ -53,6 +53,7 @@ flutter:
     - images/tshirt_fashion.jpg
     - images/winter_fashion.jpg
     - images/woolen_fashion.jpg
+    - images/circle.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
