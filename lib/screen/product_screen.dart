@@ -18,14 +18,14 @@ class Product_screen extends StatelessWidget {
           children: <Widget>[
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 500,
+              height: 533,
               child: Image.asset(image,
                 fit: BoxFit.fill,
               ),
             ),
             Positioned(
-              right: 28,
-              top: 345,
+              right: 18,
+              top: 440,
               child: Container(
                 child: Icon(Icons.favorite_border,
                 size: 20,
@@ -84,7 +84,7 @@ class Product_screen extends StatelessWidget {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(top:400.0),
+              padding: const EdgeInsets.only(top:493.0),
               child: Container(
                 decoration: BoxDecoration(
 
@@ -100,197 +100,252 @@ class Product_screen extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 17,
                       top: 30,right: 17
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
+                  child: Stack(
+                    children:<Widget>[
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
 
-                        children: <Widget>[
-                          Text(name,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 25
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
+                      children: <Widget>[
 
-                          Text(price,
-                            style: TextStyle(
-                                color: Colors.grey.shade500,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17
-                            ),
-                          ),
-                          SizedBox(
-                            height: 15,
-                          ),
-                          Text('Your Size',
-                            style: TextStyle(
-                                color: Colors.grey.shade800,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 17
-                            ),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Row(
-                            children: <Widget>[
-
-                              Container(
-                                height: 28,
-                                width: 25,
-                                child: Center(
-                                  child: Text('S',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-
-                                        color: Color(0XFF828282),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 14
-                                    ),),
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey.shade200,
-                                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                                  boxShadow:[
-                                BoxShadow(
-                                color: Colors.grey.shade300,
-                                  spreadRadius: 1,
-                                  blurRadius: 1,
-                                  offset: Offset(1, 1),
-                                ),
-
-                                ]),
-                              ),
-                              SizedBox(width: 5,),
-                              Container(
-                                height: 28,
-                                width: 25,
-                                child: Center(
-                                  child: Text('M',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-
-                                        color: Color(0XFF828282),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 14
-                                    ),),
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Color(0xffF8D9E0),
-                                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                                  boxShadow:[
-                                BoxShadow(
-                                color: Colors.grey.shade300,
-                                  spreadRadius: 1,
-                                  blurRadius: 1,
-                                  offset: Offset(1, 1),
-                                ),
-
-
-                                ]),
-                              ),
-                              SizedBox(width: 5,),
-                              Container(
-                                height: 28,
-                                width: 25,
-                                child: Center(
-                                  child: Text('L',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-
-                                        color: Color(0XFF828282),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 14
-                                    ),),
-                                ),
-                                decoration: BoxDecoration(
-                                  color: Colors.grey.shade200,
-                                  borderRadius: BorderRadius.all(Radius.circular(5)),
-                                  boxShadow:[
-                                BoxShadow(
-                                color: Colors.grey.shade300,
-                                  spreadRadius: 1,
-                                  blurRadius: 1,
-                                  offset: Offset(1, 1),
-                                ),
-
-                               ] ),
-                              ),
-                              SizedBox(width: 5,),
-
-                              Container(
-                                height: 28,
-                                width: 25,
-                                child: Center(
-                                  child: Text('XL',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-
-                                        color: Color(0XFF828282),
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 14
-                                    ),),
-                                ),
-                                decoration: BoxDecoration(
-                                  boxShadow:[
-                                    BoxShadow(
-                                      color: Colors.grey.shade300,
-                                      spreadRadius: 1,
-                                      blurRadius: 1,
-                                      offset: Offset(1, 1),
-                                    )
-                                  ],
-                                    color: Colors.grey.shade200,
-                                    borderRadius: BorderRadius.all(Radius.circular(5))
-                                ),
-                              ),
-                            ],
+                        Text(name,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 25
+                        ),
                           ),
 
 
+                        SizedBox(
+                          height: 5,
+                        ),
 
-                          SizedBox(
-                            height: 10,
+                        Text(price,
+                          style: TextStyle(
+                              color: Colors.grey.shade500,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 17
                           ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 25),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Text('Your Size',
+                          style: TextStyle(
+                              color: Colors.grey.shade800,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 17
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Row(
                           children: <Widget>[
 
+                            Container(
+                              height: 28,
+                              width: 25,
+                              child: Center(
+                                child: Text('S',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
 
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Container(
-                                height: 40,
-                                width: MediaQuery.of(context).size.width,
-                                child: Center(
-                                  child: Text('Add to Cart',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 12,
-                                        color: Colors.white
-                                    ),
-                                  ),
-                                ),
-                                decoration: BoxDecoration(
-                                    color: Colors.black,
-                                    borderRadius: BorderRadius.all(Radius.circular(20))
-                                ),
+                                      color: Color(0XFF828282),
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 14
+                                  ),),
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.grey.shade200,
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                boxShadow:[
+                              BoxShadow(
+                              color: Colors.grey.shade300,
+                                spreadRadius: 1,
+                                blurRadius: 1,
+                                offset: Offset(1, 1),
+                              ),
+
+                              ]),
+                            ),
+                            SizedBox(width: 8,),
+                            Container(
+                              height: 28,
+                              width: 25,
+                              child: Center(
+                                child: Text('M',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+
+                                      color: Color(0XFF828282),
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 14
+                                  ),),
+                              ),
+                              decoration: BoxDecoration(
+                                color: Color(0xffF8D9E0),
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                boxShadow:[
+                              BoxShadow(
+                              color: Colors.grey.shade300,
+                                spreadRadius: 1,
+                                blurRadius: 1,
+                                offset: Offset(1, 1),
+                              ),
+
+
+                              ]),
+                            ),
+                            SizedBox(width: 8,),
+                            Container(
+                              height: 28,
+                              width: 25,
+                              child: Center(
+                                child: Text('L',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+
+                                      color: Color(0XFF828282),
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 14
+                                  ),),
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.grey.shade200,
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                boxShadow:[
+                              BoxShadow(
+                              color: Colors.grey.shade300,
+                                spreadRadius: 1,
+                                blurRadius: 1,
+                                offset: Offset(1, 1),
+                              ),
+
+                             ] ),
+                            ),
+                            SizedBox(width: 8,),
+
+                            Container(
+                              height: 28,
+                              width: 25,
+                              child: Center(
+                                child: Text('XL',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+
+                                      color: Color(0XFF828282),
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 14
+                                  ),),
+                              ),
+                              decoration: BoxDecoration(
+                                boxShadow:[
+                                  BoxShadow(
+                                    color: Colors.grey.shade300,
+                                    spreadRadius: 1,
+                                    blurRadius: 1,
+                                    offset: Offset(1, 1),
+                                  )
+                                ],
+                                  color: Colors.grey.shade200,
+                                  borderRadius: BorderRadius.all(Radius.circular(5))
                               ),
                             ),
-
                           ],
                         ),
-                      )
-                    ],
-                  ),
-               ] ),
+
+
+
+                        SizedBox(
+                          height: 15,
+                        ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 25),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+
+
+                          Expanded(
+                            child: Container(
+                              height: 40,
+                              width: MediaQuery.of(context).size.width,
+                              child: Center(
+                                child: Text('Add to Cart',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12,
+                                      color: Colors.white
+                                  ),
+                                ),
+                              ),
+                              decoration: BoxDecoration(
+                                  color: Colors.black,
+                                  borderRadius: BorderRadius.all(Radius.circular(20))
+                              ),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    )
+                      ],
+                    ),
+                      Positioned(
+                        right: 10,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: <Widget>[
+                           Container(
+                             height: 20,
+                             width: 20,
+                             decoration: BoxDecoration(
+                               border: Border.all(color:Colors.black),
+                                 color: Colors.red,
+                               shape: BoxShape.circle
+                             ),
+                           ),
+                            SizedBox(
+                              height: 5,
+                            ),
+
+                            Container(
+                              height: 20,
+                              width: 20,
+                              decoration: BoxDecoration(
+                                  color: Colors.grey.shade400,
+                                  shape: BoxShape.circle
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+
+                            Container(
+                              height: 20,
+                              width: 20,
+                              decoration: BoxDecoration(
+                                  color: Colors.black,
+                                  shape: BoxShape.circle
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+
+                            Container(
+                              height: 20,
+                              width: 20,
+                              decoration: BoxDecoration(
+                                  color: Colors.pink.shade100,
+                                  shape: BoxShape.circle
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                 ] ),
               ),
             )
             ) ],

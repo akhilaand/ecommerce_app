@@ -1,4 +1,5 @@
 
+import 'package:fashion_app/screen/product_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -57,20 +58,27 @@ class Category extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Container(
+          child: InkWell(
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Product_screen(
+                price: "\$90",name: 'Gown',image: images,
+              )));
+            },
+            child: Container(
 
-            height: 260,
-            width: 200,
+              height: 260,
+              width: 200,
 //          child: Image.asset(images),
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: AssetImage(images,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage(images,
 
-                  ),),
+                    ),),
 
 
-                borderRadius: BorderRadius.all(Radius.circular(20))
+                  borderRadius: BorderRadius.all(Radius.circular(20))
+              ),
             ),
           ),
         ),
