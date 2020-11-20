@@ -1,4 +1,4 @@
-import 'package:fashion_app/screen/home_screen.dart';
+import 'file:///C:/Users/MyPc/Desktop/btech/flutter_projects/fashion_app/lib/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -12,11 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-
-      home: Home_Screen()
-    );
+        title: 'Flutter Demo',
+        home: Home_Screen());
   }
 }
-
-

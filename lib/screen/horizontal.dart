@@ -1,30 +1,38 @@
+import 'package:fashion_app/constants/constants.dart';
 import 'package:flutter/material.dart';
 
-class Sections extends StatefulWidget  {
-
+class Sections extends StatefulWidget {
   @override
   _SectionsState createState() => _SectionsState();
 }
 
 class _SectionsState extends State<Sections>
     with SingleTickerProviderStateMixin {
-  List <Widget>list=[
+  List<Widget> list = [
     Container(
-       width: 50,
-
-        child:
-        Tab(text: "Coat",)),
-    Tab(text: "Dresses",),
-    Tab(text: "Jersey",),
-    Tab(text: "Pants",),
-    Tab(text: "Shirts",),
+        width: 50,
+        child: Tab(
+          text: "Coat",
+        )),
+    Tab(
+      text: "Dresses",
+    ),
+    Tab(
+      text: "Jersey",
+    ),
+    Tab(
+      text: "Pants",
+    ),
+    Tab(
+      text: "Shirts",
+    ),
   ];
   TabController controller;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    controller = TabController(length:list.length, vsync: this);
+    controller = TabController(length: list.length, vsync: this);
   }
 
   @override
@@ -38,25 +46,15 @@ class _SectionsState extends State<Sections>
   Widget build(BuildContext context) {
     return TabBar(
         isScrollable: true,
-        labelColor:  Color(0xff333333),
+        labelColor: darkCharcol,
         labelStyle: TextStyle(
-          letterSpacing: 0.5,
-            color:
-            Color(0xff828282),
-            fontWeight: FontWeight.w700),
-        unselectedLabelColor: Color(0xff828282),
+            letterSpacing: 0.5, color: light_grey, fontWeight: FontWeight.w700),
+        unselectedLabelColor: light_grey,
         indicator: BoxDecoration(
-
-            borderRadius: BorderRadius.all(Radius.circular(30)),
-
-            color:
-            Color(0xffFBD9E0)
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+          color: light_Pink,
         ),
         controller: controller,
-        tabs: list
-
-
-
-        );
+        tabs: list);
   }
 }
