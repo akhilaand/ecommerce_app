@@ -14,7 +14,7 @@ class Product_screen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Colors.transparent,
+          backgroundColor: transp,
           body: Stack(
             children: <Widget>[
               Container(
@@ -46,7 +46,7 @@ class Product_screen extends StatelessWidget {
                   leading: IconButton(
                     icon: Icon(
                       Icons.arrow_back_ios,
-                      color: Colors.white,
+                      color: white,
                       size: 20.0,
                     ),
                     onPressed: () {
@@ -83,7 +83,7 @@ class Product_screen extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 492.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.grey.shade100,
+                        color: grey_shade100,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(50),
                           topRight: Radius.circular(50),
@@ -111,7 +111,7 @@ class Product_screen extends StatelessWidget {
                                 Text(
                                   price,
                                   style: TextStyle(
-                                      color: Colors.grey,
+                                      color: grey,
                                       fontWeight: FontWeight.w500,
                                       fontSize: 17),
                                 ),
@@ -121,7 +121,7 @@ class Product_screen extends StatelessWidget {
                                 Text(
                                   'Your Size',
                                   style: TextStyle(
-                                      color: Colors.grey.shade800,
+                                      color: grey_shade800,
                                       fontWeight: FontWeight.w700,
                                       fontSize: 17),
                                 ),
@@ -138,18 +138,18 @@ class Product_screen extends StatelessWidget {
                                           'S',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
-                                              color: Color(0XFF828282),
+                                              color: grey_dark,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 14),
                                         ),
                                       ),
                                       decoration: BoxDecoration(
-                                          color: Colors.grey.shade200,
+                                          color: grey_shade200,
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(5)),
                                           boxShadow: [
                                             BoxShadow(
-                                              color: Colors.grey.shade300,
+                                              color: grey_shade300,
                                               spreadRadius: 1,
                                               blurRadius: 1,
                                               offset: Offset(1, 1),
@@ -167,18 +167,18 @@ class Product_screen extends StatelessWidget {
                                           'M',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
-                                              color: Color(0XFF828282),
+                                              color: grey_dark,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 14),
                                         ),
                                       ),
                                       decoration: BoxDecoration(
-                                          color: Color(0xffF8D9E0),
+                                          color: light_Pink,
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(5)),
                                           boxShadow: [
                                             BoxShadow(
-                                              color: Colors.grey.shade300,
+                                              color: grey_shade300,
                                               spreadRadius: 1,
                                               blurRadius: 1,
                                               offset: Offset(1, 1),
@@ -196,18 +196,18 @@ class Product_screen extends StatelessWidget {
                                           'L',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
-                                              color: Color(0XFF828282),
+                                              color: grey_dark,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 14),
                                         ),
                                       ),
                                       decoration: BoxDecoration(
-                                          color: Colors.grey.shade200,
+                                          color: grey_shade200,
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(5)),
                                           boxShadow: [
                                             BoxShadow(
-                                              color: Colors.grey.shade300,
+                                              color: grey_shade300,
                                               spreadRadius: 1,
                                               blurRadius: 1,
                                               offset: Offset(1, 1),
@@ -225,7 +225,7 @@ class Product_screen extends StatelessWidget {
                                           'XL',
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
-                                              color: Color(0XFF828282),
+                                              color: grey_dark,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 14),
                                         ),
@@ -233,13 +233,13 @@ class Product_screen extends StatelessWidget {
                                       decoration: BoxDecoration(
                                           boxShadow: [
                                             BoxShadow(
-                                              color: Colors.grey.shade300,
+                                              color: grey_shade300,
                                               spreadRadius: 1,
                                               blurRadius: 1,
                                               offset: Offset(1, 1),
                                             )
                                           ],
-                                          color: Colors.grey.shade200,
+                                          color: grey_shade200,
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(5))),
                                     ),
@@ -268,8 +268,8 @@ class Product_screen extends StatelessWidget {
                                     height: 20,
                                     width: 20,
                                     decoration: BoxDecoration(
-                                        border: Border.all(color: Colors.black),
-                                        color: Colors.red,
+                                        border: Border.all(color: black),
+                                        color: red,
                                         shape: BoxShape.circle),
                                   ),
                                   SizedBox(
@@ -279,7 +279,7 @@ class Product_screen extends StatelessWidget {
                                     height: 20,
                                     width: 20,
                                     decoration: BoxDecoration(
-                                        color: Colors.grey.shade400,
+                                        color: grey_shade400,
                                         shape: BoxShape.circle),
                                   ),
                                   SizedBox(
@@ -289,8 +289,7 @@ class Product_screen extends StatelessWidget {
                                     height: 20,
                                     width: 20,
                                     decoration: BoxDecoration(
-                                        color: Colors.black,
-                                        shape: BoxShape.circle),
+                                        color: black, shape: BoxShape.circle),
                                   ),
                                   SizedBox(
                                     height: 5,
@@ -299,7 +298,7 @@ class Product_screen extends StatelessWidget {
                                     height: 20,
                                     width: 20,
                                     decoration: BoxDecoration(
-                                        color: Colors.pink.shade100,
+                                        color: pink_light,
                                         shape: BoxShape.circle),
                                   )
                                 ],
@@ -317,11 +316,11 @@ class Product_screen extends StatelessWidget {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 15,
-                                      color: Colors.white70),
+                                      color: white70),
                                 ),
                               ),
                               decoration: BoxDecoration(
-                                  color: Colors.black,
+                                  color: black,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(30))),
                             ),

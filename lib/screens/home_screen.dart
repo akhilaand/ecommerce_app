@@ -1,7 +1,7 @@
 import 'package:fashion_app/constants/constants.dart';
 import 'package:fashion_app/screen/first_hori.dart';
 import 'package:fashion_app/screen/horizontal.dart';
-import 'package:fashion_app/screen/sec_hori.dart';
+import 'file:///C:/Users/MyPc/Desktop/btech/flutter_projects/fashion_app/lib/components/sec_hori.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
