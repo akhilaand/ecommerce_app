@@ -1,5 +1,5 @@
 import 'package:fashion_app/data/sec_hori_data.dart';
-import 'package:fashion_app/screen/product_screen.dart';
+import 'file:///C:/Users/MyPc/Desktop/btech/flutter_projects/fashion_app/lib/components/product_screen.dart';
 import 'package:flutter/material.dart';
 
 class Sec_Hori extends StatelessWidget {
